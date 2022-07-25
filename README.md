@@ -1,6 +1,6 @@
 HyperText Assassins
-Rahul Jha, Electronics And Communication Engineering (2021-25)
-Saron Mukti Ekka, Electrical Engineering (2021-25)
+[Rahul Jha, Electronics And Communication Engineering (2021-25)
+Saron Mukti Ekka, Electrical Engineering (2021-25)]
 # BIT-CANTEEN
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
