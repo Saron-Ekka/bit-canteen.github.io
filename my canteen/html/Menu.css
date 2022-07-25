@@ -1,0 +1,373 @@
+* {
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* ------------------Header ---------------------- */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: white;
+  outline: 3px dashed white;
+}
+
+.header span {
+  transition: .5s;
+  overflow: hidden;
+  color: #00fff5;
+}
+
+.header img {
+  width: 40px;
+  height: auto;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+h1{
+  padding-top: 6px;
+}
+
+/* ------------------Buttons ------------------*/
+.Choice a {
+  margin-left: 25px;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: black;
+  padding-bottom: 1px;
+  font-size: 25px;
+  transition: 0.5s;
+  height: 40px;
+  width: 190px;
+  border: 2px solid var(--clr);
+  border-radius: 10px;
+}
+
+.Choice a p{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Choice a:hover {
+  letter-spacing: 0.15em;
+  height: 40px;
+  width: 220px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 20px var(--clr);
+}
+
+.Choice a::before {
+  content: ' ';
+  position: absolute;
+  inset: 2px;
+  background: black;
+}
+
+.Choice a span {
+  position: relative;
+  z-index: 1;
+}
+
+.Choice a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+a i:after{
+  content: ' ';
+  position: absolute;
+  left: 20%;
+  bottom: -5px;
+  width: 10px;
+  height: 4px;
+  border: 2px solid var(--clr);
+  background: black;
+  transition: 0.5s;
+}
+
+a i:before {
+  content: ' ';
+  position: absolute;
+  left: 80%;
+  top: -5px;
+  width: 10px;
+  height: 4px;
+  border: 2px solid var(--clr);
+  background: black;
+  transition: 0.5s;
+}
+
+a:hover i:after{
+  left: 80%;
+  width: 20px;
+}
+
+a:hover i:before {
+  width: 20px;
+  left: 15%;
+
+}
+
+/* ------------------2nd Heading ------------------*/
+h2{
+  background: #333;
+}
+
+.Choice {
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background: black;
+  color: #00fff5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* ------------------Menu ------------------*/
+.menu-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+/* ------------------Flip-Card ------------------*/
+.menu{
+  background: url(img/menuBG.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 9px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 250px;
+  height: 250px;
+  flex-direction: column;
+}
+
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s ease-in-out;
+  backface-visibility: hidden;
+  transform: perspective(500px)rotateY(0deg);
+
+}
+
+.card .face.front img {
+  width: 400px;
+  height: auto;
+  background-repeat: no-repeat;
+  border: 4px solid #d5420c;
+  box-shadow: 0 0 15px #d5420c;
+}
+
+.card:hover .face.front {
+  transform: perspective(500px)rotateY(180deg);
+  
+}
+
+.card .face.back {
+  background: #333;
+  border-radius: 50px;
+  color: #fff;
+  transform: perspective(500px)rotateY(180deg);
+}
+
+.card:hover .face.back {
+  transform: perspective(500px)rotateY(360deg);
+  border: 4px solid orangered;
+  border-radius: 50px;
+}
+
+.card .face h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  transform: perspective(500px) translateZ(50px);
+}
+
+.face.back ul {
+  list-style: none;
+  padding-left: 0;
+
+}
+
+.face.back {
+  text-align: center;
+  margin: auto;
+}
+
+/* ------------------Flip-Card Image Specific ------------------*/
+#Chowmin img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Pizza img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Drinks img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Dosa img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Burger img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Roll img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+#Biryani img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+/* ------------------Row-1 Images------------------*/
+.row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .face {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ------------------Fonts------------------*/
+.Font1{
+  font-family: 'Poppins', sans-serif;
+}
+
+.Font2{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.Font3{
+  font-family: 'Zilla Slab', serif;
+}
+
+
+
+
+
+/* ------------------Responsive------------------*/
+
+@media (max-width:1100px){
+  /* ------------------Menu------------------*/
+  .card .face h2{
+    font-size: 25px;
+  }
+}
+
+@media (max-width:840px){
+  /* ------------------Menu------------------*/
+  .card .face h2{
+    font-size: 22px;
+  }
+  .flex-column{
+    flex-direction: row;
+    height: 100%;
+  }
+  .row2{
+    flex-direction: column;
+  }
+  .row1{
+    flex-direction: column;
+  }
+  .card .face.front img {
+    box-shadow: 0 0 10px #d5420c;
+  }
+  .card{
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .menu{
+    background: url(img/manuBGRes.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+}
+
+@media (max-width:503px){
+  /* ------------------Menu------------------*/
+  .card .face h2{
+    font-size: 20px;
+  }
+  .flex-column{
+    flex-direction: column;
+  }
+  .row2{
+    flex-direction: column;
+  }
+  .row1{
+    flex-direction: column;
+  }
+  }
