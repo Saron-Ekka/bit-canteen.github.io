@@ -1,6 +1,7 @@
 * {
   border: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 /* ------------------Header ---------------------- */
@@ -152,6 +153,7 @@ h2{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 9px;
 }
 
 .card {
